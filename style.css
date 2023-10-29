@@ -116,6 +116,11 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
+	scale: .3;
+	transition: all .7s;
+}
+.overlay-wrapper:target .overlay{
+	scale: 1;
 }
 .overlay-left {
 	width: 250px;
