@@ -71,6 +71,18 @@ body {
 	gap: 5px;
 	color: #049a04;
 	font-size: 15px;
+	position: relative;
+	padding-left: 20px;
+}
+.inline-icon::before {
+	content: "";
+	height: 8px;
+	width: 8px;
+	background: #49f449;
+	transform: rotate(45deg);
+	left: 2px;
+	top: 8px;
+	position: absolute;
 }
 .member h2 {
 	margin: 10px 0;
