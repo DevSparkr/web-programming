@@ -10,7 +10,6 @@ body {
 }
 
 .container{
-    max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
@@ -22,9 +21,9 @@ body {
 	padding: 100px 0;
 }
 .member {
-	padding: 30px;
+	padding: 15px;
 	background: #fff;
-	border-bottom: 5px solid #0cf10c;
+	border-bottom: 3px solid #0cf10c;
 	position: relative;
 }
 .member::before {
@@ -40,46 +39,57 @@ body {
 
 .team {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0,1fr));
-	text-align: center;
-	gap: 30px;
+	grid-template-columns: repeat(6, minmax(0,1fr));
+	gap: 20px 10px;
 }
 .profile-img {
-	height: 200px;
-	width: 200px;
+	height: 150px;
+	width: 150px;
 	object-fit: cover;
 	border-radius: 9999px;
-	border: 8px solid rgb(22, 222, 22, 1);
+	border: 4px solid rgb(22, 222, 22, 1);
 	transition: border .1s;
 	position: relative;
 	z-index: 10;
+	display: block;
+	margin: auto;
+	transition: .4s;
+	cursor: pointer;
+}
+.profile-img:focus {
+	transform: scale(1.07);
 }
 .member:hover .profile-img{
 	border-color: #16de16;
 }
+.overlay-left .profile-img {
+	margin-bottom: 30px;
+}
 .inline-icon {
-	display: inline-flex;
+	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: 5px;
 	color: #049a04;
+	font-size: 15px;
 }
 .member h2 {
 	margin: 10px 0;
+	font-size: 18px;
 }
 .member p {
 	margin-bottom: 0;
 	text-align: justify;
 }
-
 .see-more {
-	display: inline-block;
+	display: block;
 	background: #02b502;
 	color: #fff;
 	text-decoration: none;
-	padding: 9px 30px;
+	padding: 6px 30px;
 	margin-top: 30px;
-	width: 100%;
-	max-width: 250px;
+	font-size: 14px;
+	border-radius: 2px;
+	text-align: center;
 }
 .overlay-wrapper {
 	position: fixed;
@@ -131,6 +141,11 @@ body {
 	text-align: left;
 }
 
+@media all and (max-width: 1340px){
+	.team {
+		grid-template-columns: repeat(4, minmax(0,1fr));
+	}
+}
 @media all and (max-width: 991px){
 	.team {
 		grid-template-columns: repeat(2, minmax(0,1fr));
